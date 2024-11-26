@@ -1,13 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-body {
+
+
+
+
+
+/* Global scrollbar styles for WebKit browsers (Chrome, Safari) */
+*::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+    height: 8px; /* Set the height for horizontal scrollbar */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color when hovering over the scrollbar thumb */
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent; /* Background of the scrollbar track */
+}
+
+/* Global scrollbar styles for Firefox */
+* {
+    scrollbar-width: thin; /* Set scrollbar to thin */
+    scrollbar-color: #888 transparent; /* Set color of scrollbar thumb and track */
+}
+
+/* Change scrollbar color on hover */
+*:hover {
+    scrollbar-color: #555 transparent; /* Darker thumb color when hovering */
+}
+
+.body {
     font-family: 'poppins',sans-serif;
     color: #85859b;
     font-size: 1rem;
     font-weight: 300;
 
 }
+.body-dark {
+    font-family: 'poppins',sans-serif;
+    background-color: #0F111A;
+    color: #9DA4B4;
+    font-size: 1rem;
+    font-weight: 300;
+}
 .header {
     background: #fff;
+    height: 10vh;
+    width: 100%;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: #9fafc9;
+    display: flex;                      /* Set up flexbox for the header */
+    align-items: center;                /* Vertically center items */
+    justify-content: space-between;      /* Space out header elements */
+    padding: 10px; 
+}
+.header-dark {
+    background-color: #0F111A;
     height: 10vh;
     width: 100%;
     border-bottom: solid;
@@ -44,27 +98,33 @@ nav {
     font-size: 3vh;
     font-weight:300 ;
 }
-/*.row {
-    display: flex;                    
-    width: 100%;                    
-}*/
-/*.col-1, .col-4, .col-5, .col-1 {
-    display: flex;                      
-    align-items: center;                
-}*/
+.tabs {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 30vw;
 
-
-
-/*.logo {
-    background: transparent;
-    color: #85859b;
-    font-family: 'poppins', sans-serif;
-    height: 1.5rem;
-    
-    padding: 0px;
-    margin: 0px;
+}
+.tabs a {
+    position: relative; /* Add this property to create space for the vertical lines */
+}
+.tabs a:not(:last-child):after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 1px solid #ccc; /* Add a vertical line */
+    width: 2px; /* Adjust this value for the line width */
+}
+.tabs h4 {
+    font-size: 2.5vh;
     font-weight: 300;
-}*/
+    text-align: center;
+}
+
+
+
 #fl-l {
     float: left;
 }
@@ -98,7 +158,7 @@ nav {
 }
 .search-bar {
     border: solid;
-    border-width: 2px;
+    border-width: 0px;
     border-color: #85859b;
     width: 100%;
     margin: 10px;
@@ -106,15 +166,22 @@ nav {
     padding-left: 2vw ;
     font-size: 2vh;
     border-radius: 90px;
-    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 .search-bar:hover {
-    border-width: 2px;
+    border-width: 1px;
 }
 
 
 
 
+
+
+
+ion-icon {
+    font-size: 3vh;
+    font-weight: 300;
+}
 
 
 .sidenav {
@@ -132,11 +199,28 @@ nav {
     opacity: 1;          /* Fully visible */
     visibility: visible;  /* Ensure it is visible */
     transition: width 0.3s ease, opacity 0.3s ease; 
+    
 }
 .sidenav.hidden {
     width: 0;            /* Collapse the width */
     opacity: 0;          /* Fade out */
     visibility: hidden;   /* Ensure it doesn't take up space */
+}
+
+
+/* Adjust on hover */
+.sidenav:hover {
+    scrollbar-color: #555 transparent; /* Darker thumb color when hovering over the sidebar */
+}
+
+
+.nav-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-3 button  i {
+    font-size: 3.5vh;
 }
 
 
@@ -223,6 +307,7 @@ a{
     padding-left: 2vw;
     height: 15vh;
     display: flex;
+    /*box-shadow: 0 2px 4px rgba(1, 1, 1, 0.6);*/
 }
 .bottom-div div {
     
@@ -233,8 +318,10 @@ a{
     flex-grow: 1;
     display: flex;
     padding: 2vh;
+    padding-bottom: 2vh;
     justify-content: evenly;
     align-items: center;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 1);
 }
 .bottom-div div h5 {
     font-size: 2vh;
@@ -250,6 +337,7 @@ a{
     margin: 10px;
     text-decoration: none;
     width: 90%;
+    box-shadow: 0 4px 4px rgba(255, 255, 255, 0.6);
 }
 
 
@@ -267,7 +355,17 @@ a{
     margin-left: 260px; /* Adjust to prevent overlap with sidenav */
     margin-top: 0px;
     padding: 20px; /* Padding for content */
-    background-color: #f5f7fa;
+    background: linear-gradient(to right,#f5f7fa,#d6d7d8);
+    height: 100%;
+    z-index: 0;
+    font-weight: 100;
+    transition: margin-left 0.3s ease;
+}
+.main-dark {
+    margin-left: 260px; /* Adjust to prevent overlap with sidenav */
+    margin-top: 0px;
+    padding: 20px; /* Padding for content */
+    background: linear-gradient(to right ,#141824,#121C32);/*#141824;*/
     height: 100%;
     z-index: 0;
     font-weight: 100;
