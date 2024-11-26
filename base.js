@@ -33,5 +33,77 @@ buttons.forEach((button) => {
 });
 
 
-// this java script is for menu list expand and hide 
 
+
+// this disabled js for 
+// document.addEventListener('keydown', function(event) {
+    
+//     if ((event.ctrlKey || event.metaKey) && event.key === 'f') {
+//         event.preventDefault(); 
+//         document.getElementById('searchBar').focus();
+//     }
+// }); 
+
+
+
+
+
+
+
+
+//  this code for search bar short cut 
+
+// Route mapping based on user input
+const routes = {
+    'dash': '#',
+    'tok': '#',
+    'lab': '#',
+    'inv': '#',
+    'l-inv': '#',
+    'quo': '#',
+    'stat': '#',
+    'exp': '#',
+    'fil': '#',
+    'comp': '#',
+    'in': '#',
+    'add cv': '#',
+    'det cv': '#',
+    'rec': '#',
+    'add st': '#',
+    'det st': '#',
+    'pay rec': '#',
+    'tr dv': '#',
+    'add inv': '#',
+    'det inv': '#',
+    'add ind': '#',
+    'todo': '#',
+    'repo': '#',
+    'lin': '#',
+    'iou': '#',
+    'reg': '#',
+
+    // Add more routes as needed
+};
+
+// Search and redirect functionality
+document.getElementById('searchBar').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        const searchValue = event.target.value.trim().toLowerCase(); // Convert to lowercase for easier matching
+        
+        // Check if the search value matches any of the routes
+        if (routes[searchValue]) {
+            // Redirect to the corresponding route
+            window.location.href = routes[searchValue];
+        } else {
+            alert('No matching route found!'); // Optional feedback for the user
+        }
+    }
+});
+
+// Ctrl + F functionality to focus on input
+document.addEventListener('keydown', function(event) {
+    if ((event.ctrlKey || event.metaKey) && event.key === 'f') {
+        event.preventDefault(); // Prevent the default browser search
+        document.getElementById('searchBar').focus(); // Focus on the search input
+    }
+});

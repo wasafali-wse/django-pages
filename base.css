@@ -4,10 +4,11 @@ body {
     color: #85859b;
     font-size: 1rem;
     font-weight: 300;
+
 }
 .header {
     background: #fff;
-    height: 5rem;
+    height: 10vh;
     width: 100%;
     border-bottom: solid;
     border-width: 1px;
@@ -25,6 +26,7 @@ nav {
     width: 100%;
 }
 .nav-1 {
+    font-size: 4vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -37,6 +39,10 @@ nav {
     font-size: 4vh;
     font-weight: 300;
     color: #85859b;
+}
+.nav-1 button span {
+    font-size: 3vh;
+    font-weight:300 ;
 }
 /*.row {
     display: flex;                    
@@ -97,10 +103,13 @@ nav {
     width: 100%;
     margin: 10px;
     padding: 10px;
-    padding-left:35px ;
-    font-size: 1rem;
+    padding-left: 2vw ;
+    font-size: 2vh;
     border-radius: 90px;
     
+}
+.search-bar:hover {
+    border-width: 2px;
 }
 
 
@@ -140,11 +149,12 @@ a{
     color: #85859b; 
 }
 .sidebar-list  {
+    font-size: 2vh;
     text-decoration: none;
     cursor: pointer;
     list-style: none;
-    padding: 5px;
-    margin:5px ;
+    padding: 1vh;
+    margin:1vh ;
     width: 85%;
     text-align: left;
     color: #85859b;
@@ -156,7 +166,7 @@ a{
 
     background-color: #f0f0f0;  
     border-radius: 5px;
-    padding: 5px;
+    padding: 1vh;
 }
 .popover-list  {
     text-decoration: none;
@@ -184,11 +194,12 @@ a{
 
 
 .sidebar-list-but {
+    font-size: 2vh;
     text-decoration: none;
     cursor: pointer;
     list-style: none;
-    padding: 5px;
-    margin:5px ;
+    padding: 1vh;
+    margin:1vh ;
     width: 85%;
     text-align: left;
     color: #85859b;
@@ -200,7 +211,7 @@ a{
 
     background-color: #f0f0f0;  
     border-radius: 5px;
-    padding: 5px;
+    padding: 1vh;
 }
 
 .hide-show {
@@ -209,8 +220,8 @@ a{
 .bottom-div {
     
     width: 90%;
-    padding-left: 25px;
-    height: 20vh;
+    padding-left: 2vw;
+    height: 15vh;
     display: flex;
 }
 .bottom-div div {
@@ -221,16 +232,16 @@ a{
     border-radius: 20px;
     flex-grow: 1;
     display: flex;
-    padding: 10px;
+    padding: 2vh;
     justify-content: evenly;
     align-items: center;
 }
 .bottom-div div h5 {
-    font-size: 1rem;
+    font-size: 2vh;
     color: #fff;
 }
 .bottom-div div a {
-    font-size: 1rem;
+    font-size: 2vh;
     font-weight:500 ;
     color: black;
     background-color: #fff;

@@ -24,13 +24,14 @@
       <nav >
         <div class="nav-1">
           <button class="btn" type="button" id="toggle">
-            <i class="fa-solid fa-bars" id="icon"></i>
+            <!-- <i class="fa-solid fa-bars" id="icon"></i> -->
+              <span>&#x2630;</span>
           </button>
       
           <h1 >ManagePro&trade;</h1>
         </div>
         <div class="nav-2">
-          <input type="text" placeholder="Search here..." name="search" class="search-bar">
+          <input type="text" placeholder="Ctrl+f..." name="search" class="search-bar" id = "searchBar">
         </div>
         <div class="">
           <button class="btn btn-pro" type="button" id="profile" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-html="true"></button>        
@@ -44,38 +45,38 @@
     <aside class="sidenav" id="sidebar">
       <div>
         <ul >
-          <li class="sidebar-list"><a href="#"><i class="fa-solid fa-table-columns"></i> Dashboard</a></li>
+          <li class="sidebar-list" id= "dash"><a href="#"><i class="fa-solid fa-table-columns"></i> Dashboard</a></li>
         
           <button class="btn sidebar-list-but"><i class="fa-solid fa-caret-right"></i> POS </button>
           <div class="hide-show">
             <ul >
-              <li class="sidebar-list"><a href="#"><i class="fa-solid fa-receipt"></i> Token</a></li>
-              <li class="sidebar-list"><i class="fa-solid fa-tags"></i> Label</a></li>
-              <li class="sidebar-list"><a href="#"><i class="fa-solid fa-file-invoice"></i> Invoice </a></li>
-              <li class="sidebar-list"><a href="#"><i class="fa-solid fa-file-invoice"></i> A-4 Invoice</a></li>
-              <li class="sidebar-list"><a href="#"><i class="fa-brands fa-artstation"></i></i> Status Check</a></li>
-              <li class="sidebar-list"><a href="#"><i class="fa-solid fa-quote-left"></i> Quotation</a></li>
-              <li class="sidebar-list"><a href="#"><i class="fa-brands fa-artstation"></i></i> Status Check</a></li>
-              <li class="sidebar-list"><a href="#"><i class="fa-solid fa-money-bill"></i> Expense</a></li>
+              <li class="sidebar-list" id="tok"><a href="#"><i class="fa-solid fa-receipt"></i> Token</a></li>
+              <li class="sidebar-list" id="lab"><i class="fa-solid fa-tags"></i> Label</a></li>
+              <li class="sidebar-list" id="inv"><a href="#"><i class="fa-solid fa-file-invoice"></i> Invoice </a></li>
+              <li class="sidebar-list" id="l-inv"><a href="#"><i class="fa-solid fa-file-invoice"></i> A-4 Invoice</a></li>
+              
+              <li class="sidebar-list"id="quo"><a href="#"><i class="fa-solid fa-quote-left"></i> Quotation</a></li>
+              <li class="sidebar-list" id="stat"><a href="#"><i class="fa-brands fa-artstation"></i></i> Status Check</a></li>
+              <li class="sidebar-list" id="exp"><a href="#"><i class="fa-solid fa-money-bill"></i> Expense</a></li>
             </ul>
           </div>
         
-          <li class="sidebar-list"><a href="#"><i class="fa-solid fa-filter"></i> Filter</a></li>
+          <li class="sidebar-list" id="fil"><a href="#"><i class="fa-solid fa-filter"></i> Filter</a></li>
           
           <button class="btn sidebar-list-but"><i class="fa-solid fa-caret-right" ></i> SMS</button>
           <div class="hide-show">
             <ul>
-              <li class="sidebar-list"><a href="#"><i class="fa-solid fa-pen-to-square"></i>  Compose</a></li>
-              <li class="sidebar-list"><a href="#"><i class="fa-solid fa-comments"></i></i> All Inbox</a></li>
+              <li class="sidebar-list" id="com"><a href="#"><i class="fa-solid fa-pen-to-square"></i>  Compose</a></li>
+              <li class="sidebar-list" id="in"><a href="#"><i class="fa-solid fa-comments"></i></i> All Inbox</a></li>
             </ul>
           </div>
 
           <button class="btn sidebar-list-but"><i class="fa-solid fa-caret-right" ></i> CRM</button>
           <div class="hide-show">
             <ul>
-              <li class="sidebar-list"><a href="#"><i class="fa-solid fa-user-plus"></i>  Add cus/ven</a></li>
-              <li class="sidebar-list"><a href="#"><i class="fa-solid fa-users"></i> Detail cus/ven</a></li>
-              <li class="sidebar-list"><a href="#"><i class="fa-solid fa-receipt"></i> Reciept</a></li>
+              <li class="sidebar-list" id="add cv"><a href="#"><i class="fa-solid fa-user-plus"></i>  Add cus/ven</a></li>
+              <li class="sidebar-list" id="det cv"><a href="#"><i class="fa-solid fa-users"></i> Detail cus/ven</a></li>
+              <li class="sidebar-list" id="rec"><a href="#"><i class="fa-solid fa-receipt"></i> Reciept</a></li>
             </ul>
           </div>  
         
@@ -83,10 +84,10 @@
           HR</button>
           <div class="hide-show">
             <ul>
-              <li class="sidebar-list"><a href="#"><i class="fa-solid fa-user-plus"></i> Add Staff</a></li>
-              <li class="sidebar-list"><a href="#"><i class="fa-solid fa-users"></i> Detail Staff</a></li>
-              <li class="sidebar-list"><a href="#"><i class="fa-solid fa-receipt"></i> Pay reciept</a></li>
-              <li class="sidebar-list"><a href="#"><i class="fa-solid fa-book-open-reader"></i> Training & Development</a></li>
+              <li class="sidebar-list" id="add st"><a href="#"><i class="fa-solid fa-user-plus"></i> Add Staff</a></li>
+              <li class="sidebar-list" id="det st"><a href="#"><i class="fa-solid fa-users"></i> Detail Staff</a></li>
+              <li class="sidebar-list" id="pay rec"><a href="#"><i class="fa-solid fa-receipt"></i> Pay reciept</a></li>
+              <li class="sidebar-list" id="tr dv"><a href="#"><i class="fa-solid fa-book-open-reader"></i> Training & Development</a></li>
             </ul>
           </div>
         
@@ -94,29 +95,29 @@
           Inventory</button>
           <div class="hide-show">
             <ul>
-              <li class="sidebar-list"><a href="#"><i class="fa-solid fa-square-plus"></i> Add Inventory</a></li>
-              <li class="sidebar-list"><a href="#"><i class="fa-solid fa-warehouse"></i> Detail Inventory</a></li>
-              <li class="sidebar-list"><a href="#"><i class="fa-solid fa-indent"></i> Add Indent</a></li>
+              <li class="sidebar-list" id="add inv"><a href="#"><i class="fa-solid fa-square-plus"></i> Add Inventory</a></li>
+              <li class="sidebar-list" id="det inv"><a href="#"><i class="fa-solid fa-warehouse"></i> Detail Inventory</a></li>
+              <li class="sidebar-list" id="add ind"><a href="#"><i class="fa-solid fa-indent"></i> Add Indent</a></li>
             </ul>
           </div>
         
-          <li class="sidebar-list"><i class="fa-solid fa-list"></i> todo</li>
+          <li class="sidebar-list" id="todo"><i class="fa-solid fa-list"></i> todo</li>
         
-          <li class="sidebar-list"><i class="fa-solid fa-chart-simple"></i> Reports</li>
+          <li class="sidebar-list" id="repo"><i class="fa-solid fa-chart-simple"></i> Reports</li>
         
           <button class="btn sidebar-list-but"><i class="fa-solid fa-caret-right"></i> Account</button>
           <div class="hide-show">
             <ul>
-              <li class="sidebar-list"><a href="#"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a></li>
-              <li class="sidebar-list"><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
-              <li class="sidebar-list"><a href="#"><i class="fa-solid fa-user-plus"></i> Register</a></li>
+              <li class="sidebar-list" id="lin"><a href="#"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a></li>
+              <li class="sidebar-list" id="lo"><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+              <li class="sidebar-list" id="reg"><a href="#"><i class="fa-solid fa-user-plus"></i> Register</a></li>
             </ul>
         </div>
         </ul>
         <div class="bottom-div">
           <div>
             <h5>Need help?</h5>
-            <a href="">Contact us</a>
+            <a href="">Docs</a>
           </div>
         </div>
       </div>
