@@ -69,6 +69,8 @@ const routes = {
     'add cv': '#',
     'det cv': '#',
     'rec': '#',
+    'add cm':'#',
+    'det cm': '#',
     'add pro': '#',
     'all pro': '#',
     'det pro': '#',
@@ -111,6 +113,18 @@ document.addEventListener('keydown', function(event) {
         document.getElementById('searchBar').focus(); // Focus on the search input
     }
 });
+
+
+
+
+// Function to toggle select all checkboxes
+function toggleSelectAll(source) {
+    const checkboxes = document.querySelectorAll('.customer-checkbox');
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = source.checked; // Set the checked state of each checkbox to match the "Select All" checkbox
+    });
+}
+
 
 
 

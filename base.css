@@ -38,7 +38,7 @@
     font-family: 'poppins',sans-serif;
     color: #85859b;
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 400;
     background-color:#F5F7F9 ;
 
 }
@@ -50,7 +50,7 @@
     font-weight: 300;
 }
 .header {
-    background: transparent;
+    background: #F5F7F9;
     height: 10vh;
     width: 100%;
     /*border-bottom: solid;
@@ -60,6 +60,10 @@
     align-items: center;                /* Vertically center items */
     justify-content: space-between;      /* Space out header elements */
     padding: 10px; 
+    top: 0;
+    left: 0;
+    z-index: 100;
+    position: fixed;
 }
 .header-dark {
     background-color: #0F111A;
@@ -95,9 +99,10 @@ nav {
     font-weight: 300;
     color: #85859b;
 }
-.nav-1 button span {
-    font-size: 3vh;
-    font-weight:300 ;
+.nav-1 button i {
+    font-size: 2vh;
+    
+    color: #fff;
 }
 .tabs {
     display: flex;
@@ -146,6 +151,9 @@ nav {
     margin: 5px;
     padding: 5px;
 
+}
+.btn .static-item i {
+    color: #fff;
 }
 .btn span {
     border: solid;
@@ -197,6 +205,7 @@ ion-icon {
 
 
 .sidenav {
+    top: 10vh;
     height: 90%;
     width: 260px; /* Set width of the sidebar */
     position: fixed; /* Make it fixed */
@@ -369,28 +378,104 @@ a{
 
 
 .main {
+    
     margin-left: 0px; /* Adjust to prevent overlap with sidenav */
-    margin-top: 0px;
+    margin-top: 10vh;
     padding: 20px; /* Padding for content */
     background: linear-gradient(to right,#f5f7fa,#d6d7d8);
-    height: 90vh;
+  /*  height: 90vh;*/
 
     z-index: 0;
-    font-weight: 100;
+    font-weight: 300;
     transition: margin-left 0.3s ease;
 }
-.main-dark {
-    margin-left: 260px; /* Adjust to prevent overlap with sidenav */
+/*.main-dark {
+    margin-left: 260px; 
     margin-top: 0px;
-    padding: 20px; /* Padding for content */
-    background: linear-gradient(to right ,#141824,#121C32);/*#141824;*/
+    padding: 20px; 
+    background: linear-gradient(to right ,#141824,#121C32);
     height: 100%;
     z-index: 0;
     font-weight: 100;
     transition: margin-left 0.3s ease;
-}
+}*/
 .container-fluid {
-    height: 80vh;
+    top: 10vh;
+    height: auto;
+
+}
+
+.static {
+    background-color: #fff;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*transform: translateY(2vh);*/
+}
+.static-item {
+    background:linear-gradient(to right,#F70284,#8823C1);
+    margin-right: 2px;
+    width: 55px;
+    height: 55px;
+    border: solid;
+    
+    border-radius: 10px;
+    border-width: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.static-item i {
+    color: #fff;
+}
+.static-item-2 {
+    background:linear-gradient(to right,#F70284,#8823C1);
+    margin-right: 2px;
+    width:25vh;
+    height: 25vh;
+    border: solid;
+    
+    border-radius: 10px;
+    border-width: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.static-item-3 {
+    background:linear-gradient(to right, rgb(45, 61, 105), rgb(84, 100, 145));
+    margin-right: 2px;
+    
+    /*height: 25vh;*/
+    border: solid;
+    border-radius: 10px;
+    border-width: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    padding: 10px;
+    color: #fff;
+    text-align: left;
+}
+.static-item-3 h5 span,h6 {
+    font-size: 2vh;
+    text-align: left;
+}
+.chart-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+}
+.chart-box {
+    max-width: 446px;
+    min-width: 446px;
+
+}
+.table-container {
+    max-height: 50vh;
 }
 
 
@@ -409,12 +494,27 @@ a{
     }
     .header{
         height: 7vh;
+        background: #F5F7F9;
     }
     .nav-1 h1 {
         display: none;
     }
     .nav-1 {
         width: 15vw;
+    }
+    .chart-container {
+        flex-direction: column;
+    }
+    .sidenav {
+        top: 7vh;
+    }
+    .main {
+        margin-top:7vh ;
+    }
+    .chart-box {
+        max-width:300px;
+        min-width: 300px;
+
     }
 }
 
@@ -433,8 +533,17 @@ a{
     }
     .header {
         height: 8vh;
+        background: #F5F7F9;
     }
-
+    .chart-container {
+        flex-direction: column;
+    }
+    .sidenav {
+        top: 8vh;
+    }
+    .main {
+        margin-top:8vh ;
+    }
 }
 
 
