@@ -81,6 +81,7 @@ const routes = {
     'add ind': '#',
     'todo': '#',
     'repo': '#',
+    'file':'#',
     'lin': '#',
     'iou': '#',
     'reg': '#',
@@ -114,38 +115,38 @@ document.addEventListener('keydown', function(event) {
 
 
 //  this code for theme toggle 
-document.addEventListener("DOMContentLoaded", () => {
-    const toggleButton = document.getElementById('toggle-theme');
-    const body = document.body;
-    const header = document.querySelector('.header');  // Select the header element
-    const main = document.querySelector('.main');
+// document.addEventListener("DOMContentLoaded", () => {
+//     const toggleButton = document.getElementById('toggle-theme');
+//     const body = document.body;
+//     const header = document.querySelector('.header'); 
+//     const main = document.querySelector('.main');
 
-    // Check for the saved theme in local storage
-    const currentTheme = localStorage.getItem('theme') || 'body';
-    body.classList.add(currentTheme);
-    header.classList.add(currentTheme === 'body' ? 'header' : 'header-dark' ); // Set the header class based on the theme
-    main.classList.add(currentTheme === 'body' ? 'main' : 'main-dark');
+//     // Check for the saved theme in local storage
+//     const currentTheme = localStorage.getItem('theme') || 'body';
+//     body.classList.add(currentTheme);
+//     header.classList.add(currentTheme === 'body' ? 'header' : 'header-dark' ); 
+//     main.classList.add(currentTheme === 'body' ? 'main' : 'main-dark');
 
     
-    toggleButton.addEventListener('click', () => {
-        if (body.classList.contains('body')) {
-            // Toggle to dark theme
-            body.classList.remove('body');
-            body.classList.add('body-dark');
-            header.classList.remove('header');
-            header.classList.add('header-dark'); // Corrected typo here
-            main.classList.remove('main');
-            main.classList.add('main-dark');
-            localStorage.setItem('theme', 'body-dark');
-        } else {
-            // Toggle to light theme
-            body.classList.remove('body-dark');
-            body.classList.add('body');
-            header.classList.remove('header-dark');
-            header.classList.add('header'); // Corrected typo here
-            main.classList.remove('main-dark');
-            main.classList.add('main');
-            localStorage.setItem('theme', 'body');
-        }
-    });
-});
+//     toggleButton.addEventListener('click', () => {
+//         if (body.classList.contains('body')) {
+//             // Toggle to dark theme
+//             body.classList.remove('body');
+//             body.classList.add('body-dark');
+//             header.classList.remove('header');
+//             header.classList.add('header-dark'); 
+//             main.classList.remove('main');
+//             main.classList.add('main-dark');
+//             localStorage.setItem('theme', 'body-dark');
+//         } else {
+//             // Toggle to light theme
+//             body.classList.remove('body-dark');
+//             body.classList.add('body');
+//             header.classList.remove('header-dark');
+//             header.classList.add('header'); 
+//             main.classList.remove('main-dark');
+//             main.classList.add('main');
+//             localStorage.setItem('theme', 'body');
+//         }
+//     });
+// });

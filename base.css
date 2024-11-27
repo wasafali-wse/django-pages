@@ -6,13 +6,13 @@
 
 /* Global scrollbar styles for WebKit browsers (Chrome, Safari) */
 *::-webkit-scrollbar {
-    width: 8px; /* Set the width of the scrollbar */
-    height: 8px; /* Set the height for horizontal scrollbar */
+    width: 0px; /* Set the width of the scrollbar */
+    height: 0px; /* Set the height for horizontal scrollbar */
 }
 
 *::-webkit-scrollbar-thumb {
     background-color: #888; /* Color of the scrollbar thumb */
-    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+    border-radius: 0px; /* Rounded corners for the scrollbar thumb */
 }
 
 *::-webkit-scrollbar-thumb:hover {
@@ -39,6 +39,7 @@
     color: #85859b;
     font-size: 1rem;
     font-weight: 300;
+    background-color:#F5F7F9 ;
 
 }
 .body-dark {
@@ -49,11 +50,11 @@
     font-weight: 300;
 }
 .header {
-    background: #fff;
+    background: transparent;
     height: 10vh;
     width: 100%;
-    border-bottom: solid;
-    border-width: 1px;
+    /*border-bottom: solid;
+    border-width: 1px;*/
     border-color: #9fafc9;
     display: flex;                      /* Set up flexbox for the header */
     align-items: center;                /* Vertically center items */
@@ -140,9 +141,20 @@ nav {
 }
 .btn {
     border: none;!important
+    
+
     margin: 5px;
     padding: 5px;
 
+}
+.btn span {
+    border: solid;
+    padding: 6px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 8px;
+    border-width: 0px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 .btn-pro {
     border: none;
@@ -161,7 +173,7 @@ nav {
     border-width: 0px;
     border-color: #85859b;
     width: 100%;
-    margin: 10px;
+    margin: 0px;
     padding: 10px;
     padding-left: 2vw ;
     font-size: 2vh;
@@ -191,9 +203,9 @@ ion-icon {
     z-index: 1; /* Sit on top of other content */
     background-color: transparent; /* Background color */
     padding-top: 20px; /* Space at the top */
-    border-right: solid;
+    /*border-right: solid;
     border-color: #85859b;
-    border-width: 1px;
+    border-width: 1px;*/
     overflow-y: auto;
     transition: right 0.3 ease;
     opacity: 1;          /* Fully visible */
@@ -234,6 +246,9 @@ a{
 }
 .sidebar-list  {
     font-size: 2vh;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     text-decoration: none;
     cursor: pointer;
     list-style: none;
@@ -247,13 +262,15 @@ a{
     text-decoration: none;
     cursor: pointer;
     list-style: none;
-
+    /*background: linear-gradient(to right, rgba(210,255,82,1) 0%,rgba(145,232,66,1) 94%);*/
     background-color: #f0f0f0;  
     border-radius: 5px;
     padding: 1vh;
 }
 .popover-list  {
     text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     list-style: none;
     padding: 5px;
@@ -272,6 +289,8 @@ a{
     padding: 5px;
 }
 .popover-list-ul {
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 0px;
     padding-left: 0px;
 }
@@ -280,6 +299,9 @@ a{
 .sidebar-list-but {
     font-size: 2vh;
     text-decoration: none;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     list-style: none;
     padding: 1vh;
@@ -346,17 +368,13 @@ a{
 
 
 
-
-
-
-
-
 .main {
-    margin-left: 260px; /* Adjust to prevent overlap with sidenav */
+    margin-left: 0px; /* Adjust to prevent overlap with sidenav */
     margin-top: 0px;
     padding: 20px; /* Padding for content */
     background: linear-gradient(to right,#f5f7fa,#d6d7d8);
-    height: 100%;
+    height: 90vh;
+
     z-index: 0;
     font-weight: 100;
     transition: margin-left 0.3s ease;
@@ -379,9 +397,25 @@ a{
 
 
 
+
+
+
+
+
 /*media query  for mobiles */
 @media (max-width: 576px) {
-    
+    .tabs {
+        display: none;
+    }
+    .header{
+        height: 7vh;
+    }
+    .nav-1 h1 {
+        display: none;
+    }
+    .nav-1 {
+        width: 15vw;
+    }
 }
 
 
@@ -393,8 +427,14 @@ a{
 
 
 /* Tablet Styles (between 576px and 768px) */
-@media (min-width: 577px) and (max-width: 768px) {
-    
+@media (min-width: 577px) and (max-width: 900px) {
+    .tabs {
+        display: none;
+    }
+    .header {
+        height: 8vh;
+    }
+
 }
 
 
@@ -407,6 +447,6 @@ a{
 
 
 /* Desktop Styles (above 768px) */
-@media (min-width: 769px) {
+@media (min-width: 901px) {
     
 }
