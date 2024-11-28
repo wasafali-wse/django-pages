@@ -477,8 +477,21 @@ a{
 .table-container {
     max-height: 50vh;
 }
-
-
+.table {
+    margin: 5px;
+    padding: 5px;
+    border: solid;
+    border-width: 0px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+thead tr {
+    background-color: #30406C;
+} 
+th {
+    
+    color: white;
+}
 
 
 

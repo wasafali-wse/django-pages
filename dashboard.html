@@ -229,15 +229,15 @@
         <!-- now the table is started  -->
         <div class="table-container">
           <table class="table table-hover" id="customer-table">
-            <thead style="background: #0e2238; color: #fff;">
+            <thead > <!-- style="background: #0e2238; color: #fff;" -->
                 <tr>
                     <th scope="col">
                         <input type="checkbox" id="select-all" onclick="toggleSelectAll(this)">
                     </th>
-                    <th scope="col">S.No</th>
-                    <th scope="col">Contact</th>
                     <th scope="col">Name</th>
-                    
+                    <th scope="col">Contact</th>
+                    <th scope="col">Desc</th>
+                    <th scope="col">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -248,11 +248,12 @@
                     </td>
                     <td>
                       <a href="{% url 'customer_detail' customer.id %}" style="text-decoration: none; color: inherit;">
-                        {{ customer.s_no }}
+                        {{ customer.name }}
                       </a>
                     </td>
                     <td>{{ customer.contact }}</td>
-                    <td>{{ customer.name }}</td>
+                    <td>{{ customer.desc }}</td>
+                    <td>{{ customer.status }}</td>
                     
                 </tr>
                 {% endfor %}
